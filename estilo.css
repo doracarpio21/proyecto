@@ -1,0 +1,220 @@
+/* ==========================================================
+   HOJA DE ESTILOS - PROYECTO WEB DORA CARPIO
+   Paleta: Blanco Hueso, Beige Suave, Crema y Tonos Café
+   ========================================================== */
+
+:root {
+    --bg-principal: #FDFBF7;      /* Blanco Hueso */
+    --bg-secundario: #F4EBE1;     /* Beige Suave */
+    --bg-tarjeta: #FAF5EF;        /* Crema Claro */
+    --color-borde: #E3D3C4;       /* Beige Borde */
+    --color-acento: #8C6D58;      /* Café Avellana / Acento */
+    --color-hover: #705441;       /* Café Intenso para interacciones */
+    --color-texto: #3D3228;       /* Café Oscuro / Lectura */
+    --color-texto-suave: #66564A; /* Café Medio */
+}
+
+/* Reset Básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--color-texto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+}
+
+/* Encabezado Principal */
+.header-principal {
+    background-color: var(--bg-secundario);
+    border-bottom: 2px solid var(--color-borde);
+    padding: 30px 20px 15px 20px;
+    text-align: center;
+}
+
+.logo-titulo h1 {
+    font-size: 2.1rem;
+    color: var(--color-texto);
+    font-weight: 700;
+}
+
+.subtitulo {
+    color: var(--color-texto-suave);
+    font-size: 1rem;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Navegación */
+.navegacion {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 20px;
+    background-color: var(--bg-tarjeta);
+    border: 1px solid var(--color-borde);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.activo {
+    background-color: var(--color-acento);
+    color: #FFFFFF;
+    border-color: var(--color-acento);
+}
+
+/* Contenedor General */
+.contenedor-principal {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Artículos e Información */
+.articulo-contenido {
+    background-color: var(--bg-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+}
+
+.articulo-header h2 {
+    color: var(--color-acento);
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.introduccion {
+    font-size: 1.08rem;
+    color: var(--color-texto-suave);
+    margin-bottom: 15px;
+}
+
+/* Estilos de Contenedores para Imágenes */
+.contenedor-imagen {
+    width: 100%;
+    background-color: var(--bg-secundario);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed var(--color-acento);
+}
+
+.contenedor-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cuerpo-img {
+    height: 320px;
+    margin: 25px 0;
+}
+
+.mediano {
+    height: 240px;
+    margin: 25px 0;
+}
+
+/* Secciones de Información */
+.bloque-info {
+    margin-top: 30px;
+}
+
+.bloque-info h3 {
+    color: var(--color-acento);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--color-borde);
+    padding-bottom: 5px;
+}
+
+.bloque-info p {
+    margin-bottom: 15px;
+}
+
+/* Grillas y Cajas Informativas */
+.grid-dos-columnas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.caja-detalle {
+    background-color: var(--bg-secundario);
+    border: 1px solid var(--color-borde);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.caja-detalle h4 {
+    color: var(--color-acento);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.caja-detalle ul {
+    padding-left: 20px;
+}
+
+.caja-detalle li {
+    margin-bottom: 8px;
+}
+
+/* Filas de Texto */
+.filas-informativas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.fila-item {
+    background-color: var(--bg-secundario);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-acento);
+}
+
+.fila-item h4 {
+    color: var(--color-acento);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.fila-item ul {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.fila-item li {
+    margin-bottom: 5px;
+}
+
+/* Pie de Página */
+.pie-pagina {
+    background-color: var(--bg-secundario);
+    border-top: 1px solid var(--color-borde);
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: var(--color-texto-suave);
+}
